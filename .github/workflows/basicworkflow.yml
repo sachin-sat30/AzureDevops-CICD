@@ -1,0 +1,20 @@
+name: learn-github-actions
+
+#trigger name or event e.g. push,, pull request and schedule
+on: [workflow_dispatch]
+
+#The jobs section defines what tasks the workflow will execute. Each job runs in a fresh instance of the virtual environment.
+jobs:
+    say-hello:
+        name: My Job name
+        #virtual environments like ubuntu-latest, windows-latest, macos-latest, etc.
+        runs-on: ubuntu-latest
+        #A sequence of tasks to be executed in the job. Each step can run commands, use actions, or reference other repositories
+        steps:
+            - name: 'Run a command line'
+              run: echo 'Hello from github actions'
+            - name: 'Run from multi line'
+              run: |
+               echo 'This is from multi line command...!!!'
+               echo 'This is from bicep script step1...!!!'
+
