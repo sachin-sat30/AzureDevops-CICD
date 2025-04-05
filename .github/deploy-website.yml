@@ -2,6 +2,7 @@ name: deploy-my-website
 
 # on: [workflow_dispatch]
 
+# added permissions on token
 permissions:
   id-token: write
   contents: read
